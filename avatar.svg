@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Monogram A">
+  <rect width="200" height="200" fill="#0b1220"/>
+  <path d="M0 40V0h40M160 0h40v40M200 160v40h-40M40 200H0v-40" fill="none" stroke="#22d3ee" stroke-width="4"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#22d3ee" stroke-opacity=".35" stroke-width="2"/>
+  <text x="100" y="128" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="84" font-weight="700" fill="#22d3ee">A_</text>
+</svg>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adilbek — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Adilbek, a student web developer: about me, projects from the IWaMAD course, and a contact form.">
+  <link rel="icon" href="avatar.svg" type="image/svg+xml">
+  <script>
+    /* set the saved theme before the page paints, so there is no flash */
+    try {
+      var saved = localStorage.getItem('theme');
+      if (!saved) {
+        saved = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', saved);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about">adilbek<span class="brand-dot">_</span>dev</a>
+      <button class="theme-toggle" id="theme-toggle" type="button">Light mode</button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <img class="avatar" src="avatar.svg" alt="Monogram avatar with the letter A" width="200" height="200">
+        <div>
+          <p class="eyebrow">About Me · Student web developer</p>
+          <h1 id="about-title">Hi, I'm Adilbek</h1>
+          <p>
+            I'm a student from Kazakhstan with a background in cloud infrastructure (AWS),
+            backend development with Django REST Framework, and networking (Cisco).
+            I'm learning front-end development in the IWaMAD course, going from plain
+            semantic HTML to React and back to vanilla JavaScript for this portfolio.
+          </p>
+          <ul class="tags" aria-label="Skills">
+            <li>AWS</li>
+            <li>Django REST</li>
+            <li>Cisco networking</li>
+            <li>pandas</li>
+            <li>HTML5 / CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title">Projects</h2>
+        <div class="projects">
+          <article class="card">
+            <p class="card-week">Week 01</p>
+            <h3>HTML Profile Page</h3>
+            <p>
+              My first page, written in plain semantic HTML5 with no CSS and no JavaScript.
+              It has a header, navigation, sections for skills and goals, and a contact block.
+            </p>
+            <ul class="tags"><li>HTML5</li><li>Semantic markup</li></ul>
+            <a class="btn" href="https://github.com/Adilbek679/iwamad-practice/tree/week-01" target="_blank" rel="noopener">View code on GitHub</a>
+          </article>
+
+          <article class="card">
+            <p class="card-week">Week 02</p>
+            <h3>Profile Card with Vite</h3>
+            <p>
+              A styled profile card built in a Vite project with vanilla JavaScript.
+              The like button toggles the card state and updates its aria-pressed attribute.
+            </p>
+            <ul class="tags"><li>Vite</li><li>CSS3</li><li>JavaScript</li></ul>
+            <a class="btn" href="https://github.com/Adilbek679/iwamad-practice/tree/week-02" target="_blank" rel="noopener">View code on GitHub</a>
+          </article>
+
+          <article class="card">
+            <p class="card-week">Week 03</p>
+            <h3>React Profile Card</h3>
+            <p>
+              The same profile card rebuilt in React and TypeScript, split into small
+              components (Header, ProfileCard, SkillBadge, Footer) that receive data through props.
+            </p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Props</li></ul>
+            <a class="btn" href="https://github.com/Adilbek679/iwamad-practice/tree/week-03" target="_blank" rel="noopener">View code on GitHub</a>
+          </article>
+
+          <article class="card">
+            <p class="card-week">Week 04</p>
+            <h3>Multi-page React App</h3>
+            <p>
+              A small multi-page app with React Router for the Home, Skills and Contact pages
+              and a 404 page. Likes are shared between pages with Context, and the like button has a test.
+            </p>
+            <ul class="tags"><li>React Router</li><li>Context</li><li>Vitest</li></ul>
+            <div class="card-links">
+              <a class="btn" href="https://adilbek679.github.io/iwamad-practice/" target="_blank" rel="noopener">Open live site</a>
+              <a class="btn btn-ghost" href="https://github.com/Adilbek679/iwamad-practice/tree/week-04" target="_blank" rel="noopener">View code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <p>
+            Have a question or want to work together? Fill in the form and I'll get back to you.
+            You can also write to me directly or look at my code on GitHub.
+          </p>
+          <p class="contact-links">
+            <a href="mailto:idealpirnazarov@gmail.com">idealpirnazarov@gmail.com</a><br>
+            <a href="https://github.com/Adilbek679" target="_blank" rel="noopener">github.com/Adilbek679</a>
+          </p>
+        </div>
+
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="name">Name (required)</label>
+            <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+            <p class="error" id="name-error"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+            <p class="error" id="email-error"></p>
+          </div>
+          <div class="field">
+            <label for="message">Message (required)</label>
+            <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error"></p>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+          <p class="success" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Adilbek. Built with HTML, CSS and vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
